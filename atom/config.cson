@@ -1,0 +1,47 @@
+"*":
+  build: {}
+  core:
+    disabledPackages: [
+      "language-markdown"
+      "build-markdown"
+      "linter-rails-best-practices"
+    ]
+    followSymlinks: false
+    hideGitIgnoredFiles: true
+    ignoredNames: [
+      ".DS_Store"
+      ".git/*"
+    ]
+    projectHome: "/Users/domster83/projects"
+    themes: [
+      "seti-ui"
+      "monokai"
+    ]
+  editor:
+    fontFamily: "Menlo"
+    invisibles: {}
+    showIndentGuide: true
+    softWrapAtPreferredLineLength: true
+  "exception-reporting":
+    userId: "d1817989-e881-4edd-90ed-2988304f675f"
+  jekyll:
+    serverPort: 4000
+  minimap: {}
+  "release-notes":
+    viewedVersion: "0.95.0"
+  "spell-check":
+    grammars: [
+      "text.plain"
+      "source.gfm"
+      "text.git-commit"
+      "text.html.basic"
+    ]
+  tabs:
+    showIcons: true
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: false
+  welcome:
+    showOnStartup: false
+  whitespace:
+    removeTrailingWhitespace: false
