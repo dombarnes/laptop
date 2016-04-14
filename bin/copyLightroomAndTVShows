@@ -1,0 +1,38 @@
+#!/bin/bash
+# Syncs TV shows to My Book Studio
+# Syncs Lightroom 2011 catalog
+$DIRECTORY = "/Volumes/My\ Book\ Studio/"
+
+backupTV() {
+echo "- Checking for Drive"
+# if [ ! -d "$DIRECTORY" ]; then
+# 	  echo "X Drive not connected."
+# 	  exit
+# 	else
+		rsync -rv --ignore-existing --exclude=.DS_Store /Users/domster83/Music/iTunes/iTunes\ Media/TV\ Shows/ /Volumes/My\ Book\ Studio/TV
+# fi
+}
+
+backupLightroom () {
+echo "- Checking for Drive"
+if [! -d "${DIRECTORY}" ]; then
+	  echo "Drive not connected."
+	  exit 1
+fi
+rsync -vur /Volumes/NIFTY/Lightroom\ 2011/ "${DIRECTORY}"/Dom/Pictures/Lightroom\ 2011/
+}
+
+finishingTasks() {
+	echo "✓ Transfer Complete"
+	say -v whisper "Transfer Complete"
+}
+
+echo "Backup Lightroom, TV Shows or both?"
+read -p "Enter choice (L)ightroom, (T)V or (B)oth:  " CHOICE;
+case $CHOICE in
+		[Ll]* ) backupLightroom;finishingTasks;;
+		[Tt]* ) backupTV;finishingTasks;;
+		[Bb]* ) backupTV; backupLightroom;finishingTasks;;
+		*) echo "Please make a selection (L/T/B):  "
+esac
+exit 0
