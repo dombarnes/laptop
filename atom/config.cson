@@ -14,8 +14,8 @@
     ]
     projectHome: "/Users/domster83/projects"
     themes: [
-      "seti-ui"
-      "monokai"
+      "material-ui"
+      "material-syntax"
     ]
   editor:
     fontFamily: "Menlo"
@@ -29,6 +29,8 @@
   minimap: {}
   "release-notes":
     viewedVersion: "0.95.0"
+  "seti-ui":
+    themeColor: "Steel"
   "spell-check":
     grammars: [
       "text.plain"
@@ -41,6 +43,7 @@
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: false
+  "unity-ui": {}
   welcome:
     showOnStartup: false
   whitespace:

@@ -15,6 +15,7 @@ alias rehide='defaults write com.apple.finder AppleShowAllFiles NO'
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
-
+alias r=bin/rails
+alias hl='heroku local'
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
