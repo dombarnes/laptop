@@ -16,10 +16,6 @@ export PATH="$HOME/laptop/bin:$PATH"
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 # For asp.net tools
 [ -s "/Users/domster83/.dnx/dnvm/dnvm.sh" ] && source "/Users/domster83/.dnx/dnvm/dnvm.sh" # Load dnvm
-# The next line updates PATH for the Google Cloud SDK.
-source '/usr/local/google-cloud-sdk/path.bash.inc'
-# The next line enables shell command completion for gcloud.
-source '/usr/local/google-cloud-sdk/completion.bash.inc'
 
 # Set git autocompletion and PS1 integration
 if [ -f `brew --prefix`/etc/bash_completion ]; then

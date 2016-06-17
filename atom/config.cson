@@ -1,4 +1,7 @@
 "*":
+  "atom-minify":
+    cssMinifier: "CSSO"
+    minifyOnSave: true
   build: {}
   core:
     disabledPackages: [
@@ -15,7 +18,7 @@
     projectHome: "/Users/domster83/projects"
     themes: [
       "material-ui"
-      "material-syntax"
+      "monokai"
     ]
   editor:
     fontFamily: "Menlo"
@@ -24,8 +27,7 @@
     softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "d1817989-e881-4edd-90ed-2988304f675f"
-  jekyll:
-    serverPort: 4000
+  jekyll: {}
   minimap: {}
   "release-notes":
     viewedVersion: "0.95.0"

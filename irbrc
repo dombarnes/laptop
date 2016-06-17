@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-require "awesome_print"
+require 'awesome_print'
 require 'irb/completion'
 require 'irb/ext/save-history'
 require 'rubygems'
@@ -38,6 +38,4 @@ def me
   User.find_by_login(ENV['USER'].strip)
 end
 
-def r
-  reload!
-end
+
