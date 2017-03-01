@@ -1,3 +1,4 @@
+#! /usr/bash
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
@@ -11,6 +12,9 @@ for f in $HOME/laptop/*.bash; do
 done
 
 export PATH="$HOME/laptop/bin:$PATH"
+# Google Cloud SDK complations
+source /usr/local/google-cloud-sdk/completion.bash.inc
+source /usr/local/google-cloud-sdk/path.bash.inc
 
 # Travis needs this
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
@@ -24,10 +28,12 @@ fi
 
 GIT_PS1_SHOWDIRTYSTATE=true
 
-if [ -f /opt/local/etc/bash_completion ]; then
-    . /opt/local/etc/bash_completion
-fi
+# autocompletes
+# for f in /usr/local/etc/bash_completion.d/*; do
+#     source $f
+# done
 
+# rbenv required
 if which rbenv > /dev/null; then
 	eval "$(rbenv init -)";
 fi
@@ -159,3 +165,4 @@ code () {
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh
+export ASPNETCORE_ENVIRONMENT=development
