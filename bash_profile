@@ -13,8 +13,8 @@ done
 
 export PATH="$HOME/laptop/bin:$PATH"
 # Google Cloud SDK complations
-source /usr/local/google-cloud-sdk/completion.bash.inc
-source /usr/local/google-cloud-sdk/path.bash.inc
+source ~/.google-cloud-sdk/completion.bash.inc
+source ~/.google-cloud-sdk/path.bash.inc
 
 # Travis needs this
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
@@ -153,16 +153,16 @@ rbenv() {
   esac
 }
 
-code () {
-    if [[ $# = 0 ]]
-    then
-        open -a "Visual Studio Code"
-    else
-        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
-        open -a "Visual Studio Code" --args "$F"
-    fi
-}
+# code () {
+#     if [[ $# = 0 ]]
+#     then
+#         open -a "Visual Studio Code"
+#     else
+#         [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+#         open -a "Visual Studio Code" --args "$F"
+#     fi
+# }
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh
-export ASPNETCORE_ENVIRONMENT=development
+source /usr/local/microsoft/azure-cli/az.completion

@@ -1,8 +1,10 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "3eea61a6-8953-4018-9b95-e8aefd375649"
   "atom-minify":
     cssMinifier: "CSSO"
-  "autocomplete-ruby":
-    rsensePath: "/Users/domster83/.rbenv/shims/rsense"
+  "autocomplete-ruby": {}
   build: {}
   core:
     disabledPackages: [

@@ -10,6 +10,7 @@ gem 'cocoapods'
 
 # Used in general scripts
 gem 'terminal-notifier'
+gem 'awesome_print'
 gem 'launchy'
 gem 'mandrill'
 gem 'spreadsheet'

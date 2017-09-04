@@ -14,6 +14,7 @@
         ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
         st = status -s
 	last = diff @~..@
+        history = log --follow -p 
 [color]
         diff = auto
         status = auto
@@ -39,6 +40,7 @@
         # Setting to git 2.0 default to suppress warning message
         default = simple
 [filter "lfs"]
-	required = true
-	smudge = git-lfs smudge -- %f
 	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
